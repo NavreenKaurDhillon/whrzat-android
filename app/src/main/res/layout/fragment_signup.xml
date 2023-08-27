@@ -1,0 +1,380 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llsignupMain"
+
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawablePadding="@dimen/dp_4"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_16"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:actionBarSize"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtsignupTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_4"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:text="@string/label_signup"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtsignupmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:text="Enter your details to sign up."
+                android:textColor="@color/lightgray"
+                android:textSize="@dimen/sp_12" />
+
+            <RelativeLayout
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:foreground="?android:selectableItemBackground">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivSpot"
+                    android:layout_width="@dimen/dp_110"
+                    android:layout_height="@dimen/dp_110"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="@dimen/dp_10" />
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/ic_placeholder_image"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_24"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/etFName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="Full name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName|textCapWords|textNoSuggestions"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_12"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="LabelFor" />
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="220dp"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="@color/shadow"
+                android:visibility="gone" />
+
+            <!--            <android.support.design.widget.TextInputLayout-->
+            <!--                android:id="@+id/tilLName"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:layout_marginTop="@dimen/activity_vertical_margin">-->
+
+            <!--                <android.support.design.widget.TextInputEditText-->
+            <!--                    android:id="@+id/etLName"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:background="@null"-->
+            <!--                    android:hint="@string/str_last_name"-->
+            <!--                    android:imeOptions="actionNext"-->
+            <!--                    android:inputType="textPersonName|textCapWords|textNoSuggestions"-->
+            <!--                    android:maxLength="24"-->
+            <!--                    android:maxLines="1"-->
+            <!--                    android:padding="@dimen/activity_vertical_margin"-->
+            <!--                    android:textSize="@dimen/sp_16"-->
+            <!--                    tools:ignore="LabelFor" />-->
+            <!--            </android.support.design.widget.TextInputLayout>-->
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="@dimen/dp_1"-->
+            <!--                android:layout_marginEnd="@dimen/dp_16"-->
+            <!--                android:layout_marginStart="@dimen/dp_16"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:background="@color/shadow" />-->
+
+
+            <!--            <android.support.design.widget.TextInputLayout-->
+            <!--                android:id="@+id/tilEmail"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:layout_marginTop="@dimen/activity_vertical_margin">-->
+
+            <!--                <android.support.design.widget.TextInputEditText-->
+            <!--                    android:id="@+id/etEmail"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:background="@null"-->
+            <!--                    android:hint="@string/label_email"-->
+            <!--                    android:imeOptions="actionNext"-->
+            <!--                    android:inputType="textEmailAddress"-->
+            <!--                    android:maxLines="1"-->
+            <!--                    android:padding="@dimen/activity_vertical_margin"-->
+            <!--                    android:textSize="@dimen/sp_16"-->
+            <!--                    tools:ignore="LabelFor" />-->
+            <!--            </android.support.design.widget.TextInputLayout>-->
+
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="@dimen/dp_1"-->
+            <!--                android:layout_marginEnd="@dimen/dp_16"-->
+            <!--                android:layout_marginStart="@dimen/dp_16"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:background="@color/shadow" />-->
+
+            <!--            <android.support.design.widget.TextInputLayout-->
+            <!--                android:id="@+id/tilPassword"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="@dimen/activity_vertical_margin"-->
+            <!--                app:passwordToggleEnabled="true"-->
+            <!--                android:visibility="gone"-->
+            <!--                app:passwordToggleTint="@color/pink">-->
+
+            <!--                <android.support.design.widget.TextInputEditText-->
+            <!--                    android:id="@+id/etPassword"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:background="@null"-->
+            <!--                    android:hint="@string/label_password"-->
+            <!--                    android:imeOptions="actionNext"-->
+            <!--                    android:inputType="textPassword"-->
+            <!--                    android:maxLength="15"-->
+            <!--                    android:maxLines="1"-->
+            <!--                    android:padding="@dimen/activity_vertical_margin"-->
+            <!--                    android:textSize="@dimen/sp_16"-->
+            <!--                    tools:ignore="LabelFor" />-->
+            <!--            </android.support.design.widget.TextInputLayout>-->
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="@dimen/dp_1"-->
+            <!--                android:visibility="gone"-->
+            <!--                android:layout_marginEnd="@dimen/dp_16"-->
+            <!--                android:layout_marginStart="@dimen/dp_16"-->
+            <!--                android:background="@color/shadow" />-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_24"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.rilixtech.CountryCodePicker
+                        android:id="@+id/ccpNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        app:ccp_hideNameCode="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/ic_baseline_down_24"
+                        android:padding="@dimen/dp_10"
+                        android:text="+91"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_16" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/opensans_regular"
+                        android:hint="@string/Phone_num"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_10"
+                        android:textSize="@dimen/sp_16"
+                        tools:ignore="LabelFor" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="@color/shadow"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_24"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp">
+
+                <EditText
+                    android:id="@+id/etBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:fontFamily="@font/opensans_regular"
+                    android:hint="@string/label_Bio_opt"
+                    android:imeOptions="actionDone"
+                    android:inputType="text|textNoSuggestions"
+                    android:maxLines="3"
+                    android:padding="@dimen/dp_12"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="LabelFor" />
+            </androidx.cardview.widget.CardView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="@color/shadow"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilreferralCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etreferralCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/label_referral"
+                    android:imeOptions="actionDone"
+                    android:inputType="text|textNoSuggestions"
+                    android:maxLines="3"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="@color/shadow"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvTotalLoves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_68"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:background="@drawable/baundary_login"
+                android:fontFamily="@font/opensans_bold"
+                android:foreground="?android:selectableItemBackground"
+                android:gravity="center"
+                android:padding="@dimen/dp_16"
+                android:text="@string/label_Sign_Up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tvlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_32"
+                android:fontFamily="@font/opensans_bold"
+                android:text="@string/have_an_account"
+                android:textColor="@color/lightgray"
+                android:textSize="@dimen/dp_14"
+                tools:ignore="MissingPrefix" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_16" />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+</layout>

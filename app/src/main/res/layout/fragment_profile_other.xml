@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctlBar"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:stateListAnimator="@null"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ctlbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_240"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rlMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:background="@color/white"
+                    android:elevation="@dimen/dp_4"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp">
+
+                    <ImageView
+                        android:id="@+id/tvBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dp_16"
+                        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/label_profile"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_20" />
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/toolbar">
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivSpot"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="@dimen/dp_10"
+                        android:transitionName="pic"
+                        tools:src="@drawable/banner" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:fontFamily="@font/opensans_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_below="@+id/ivSpot"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_20"
+                        android:transitionName="name"
+                        tools:text="Christopher Jackson" />
+
+                    <TextView
+                        android:id="@+id/tvCity"
+                        fontPath="fonts/AvenirLTStd_Book.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvUserName"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:layout_toEndOf="@id/ivSpot"
+                        android:textColor="@color/greySpot"
+                        android:textSize="@dimen/sp_16"
+                        android:visibility="gone"
+                        tools:text="Dubai United Arab Emirates" />
+
+                    <TextView
+                        android:id="@+id/tvTotalLoves"
+                        android:fontFamily="@font/opensans_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvCity"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:drawablePadding="@dimen/dp_4"
+                        android:layout_centerHorizontal="true"
+                        android:drawableStart="@drawable/ic_like_profile"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        tools:text="223 Loves" />
+
+                    <TextView
+                        android:id="@+id/tvUserDiscription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivSpot"
+                        android:layout_marginEnd="@dimen/dp_24"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="@dimen/dp_4"
+                        android:maxLines="2"
+                        android:visibility="gone"
+                        android:textColor="@color/DarkGrey"
+                        tools:text="I’m the coolest guy around here. I go to some amazing places and create hotspots" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/shadow"/>
+
+        <LinearLayout
+            android:id="@+id/llLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp_4"
+                android:drawableStart="@drawable/ic_chat_post"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_16"
+                android:text="@string/label_chat"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+
+            <TextView
+                android:id="@+id/tvBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_block"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_16"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/label_block" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/shadow"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfileOthers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlMain"
+        android:layout_marginBottom="24dp"
+        android:clipToPadding="false"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <TextView
+        android:id="@+id/tvNoActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No Activity"
+        android:fontFamily="@font/opensans_semibold"
+        android:textColor="@color/red_create"
+        android:textSize="@dimen/sp_18"
+        android:visibility="gone" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

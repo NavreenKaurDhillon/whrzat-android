@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_all_events"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codebrew.whrzat.ui.allevents.AllEventsActivity">
+
+    <ImageView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        android:padding="@dimen/dp_16" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:fontFamily="@font/opensans_semibold"
+        android:textColor="@color/red"
+        android:padding="@dimen/dp_16"
+        android:id="@+id/tvAddEvents"
+        android:background="?selectableItemBackground"
+        android:layout_alignParentEnd="true"
+        android:text="@string/label_add_Event"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvBack"
+        android:text="@string/label_events_at"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"
+        android:id="@+id/tvEventsAt"
+        android:drawablePadding="@dimen/dp_6"
+        android:fontFamily="@font/opensans_semibold"
+        android:textColor="@color/red"
+        android:layout_marginStart="@dimen/dp_16"
+        android:drawableStart="@drawable/star"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:id="@+id/tvEventTitle"
+        android:textSize="@dimen/sp_18"
+        android:layout_marginTop="@dimen/dp_4"
+       android:fontFamily="@font/opensans_semibold"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/tvEventsAt"
+        tools:text="Siam Shopping Center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@+id/tvEventTitle"
+        android:alpha=".2"
+        android:id="@+id/view1"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/shadow_grey" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view1"
+        android:layout_marginBottom="24dp"
+        android:clipToPadding="false"
+        android:id="@+id/rvEvents"/>
+
+
+</RelativeLayout>
+
+</layout>

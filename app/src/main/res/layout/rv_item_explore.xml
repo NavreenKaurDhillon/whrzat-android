@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_260"
+    android:orientation="vertical"
+    android:foreground="?selectableItemBackground"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp">
+
+
+    <!--<com.joooonho.SelectableRoundedImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/ivSpotPic"
+        android:scaleType="centerCrop"
+        app:sriv_oval="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tvSpotTitle"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:alpha=".80"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toRightOf="@+id/ivSpotPic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivSpotPic"
+        tools:text="Onesta" />
+    <TextView
+        android:id="@+id/tvPopularityType"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:drawablePadding="1dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="9sp"
+        android:drawableStart="@drawable/flame_red_listing_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/ivSpotPic"
+        app:layout_constraintLeft_toRightOf="@+id/ivSpotPic"
+        tools:text="Popular" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivSpotPic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_165"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="6dip"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSpotSubTitle"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="10dp"
+        android:alpha=".50"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="9sp"
+        app:layout_constraintLeft_toRightOf="@+id/ivSpotPic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpotTitle"
+        tools:text="Al Fresc safafas dgsgsdgs Restaurant" />
+
+
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E74C3C</color>
+    <color name="colorPrimaryDark">#E74C3C</color>
+    <color name="colorAccent">#E74C3C</color>
+
+    <color name="black">#000000</color>
+
+    <color name="profile_blue">#526177</color>
+    <color name="next_blue">#0089CD</color>
+
+    <color name="colorToolbar">#2C2E2F</color>
+    <color name="white">#fff</color>
+    <color name="dark">#C8242526</color>
+    <color name="yellow">#fdd835</color>
+    <color name="yellow_dark">#F7CB47</color>
+    <color name="grey">#181a1b</color>
+    <color name="lightGrey">#3d4143</color>
+    <color name="fbColor">#3b5998</color>
+    <color name="red">#F14545</color>
+    <color name="green">#5EA20F</color>
+    <color name="artistgrey">#979797</color>
+    <color name="artistGreydark">#979797</color>
+    <color name="viewLine">#B0FFFFFF</color>
+    <color name="turquoise">#40e0d0</color>
+
+    <color name="bottom_bar_text">#c1c1c1</color>
+    <color name="rbText">#c1c1c1</color>
+    <color name="flowbacground">#EBEBEB</color>
+    <color name="light_blue">#0089CD</color>
+    <color name="dark_blue">#233555</color>
+    <color name="blue">#233555</color>
+    <color name="gray">#80000000</color>
+    <color name="view">#1f000000</color>
+
+    <color name="lightgray">#CC000000</color>
+    <color name="greyMedium">#838383</color>
+    <color name="hintcolor">#1F000000</color>
+    <color name="greyTags">#E9E9E9</color>
+    <color name="backgroundgrey">#F2F2F2</color>
+    <color name="sky_blue">#5FABFF</color>
+    <color name="image_placeholder">#F1F1F1</color>
+    <color name="add_post_line">#E0E0E0</color>
+    <color name="text_blue">#384865</color>
+    <color name="hint_grey">#515151</color>
+    <color name="bottom_bar_text_color">#898989</color>
+
+    <color name="light_grey">#BBBBBB</color>
+    <color name="pink">#E74C3C</color>
+
+    <color name="redVeryPopular">#DB4437</color>
+    <color name="orangePopular">#FB7200</color>
+    <color name="blueChill">#5FABFF</color>
+    <color name="popularRed">#FB7200</color>
+    <color name="DarkGrey">#3B3B3B</color>
+    <color name="red_create">#E74C3C</color>
+    <color name="greySpot">#383232</color>
+    <color name="greyWhrzat">#9F9F9F</color>
+    <color name="shadow">#E9E9E9</color>
+    <color name="bottomBarGrey">#9B9B9B</color>
+
+    <color name="shadow_grey">#979797</color>
+    <color name="tutorial_grey">#818181</color>
+    <color name="walkthrough_dot">#D1D1D1</color>
+
+    <color name="grey_detail">#383232</color>
+    <color name="color7B">#7B7B7B</color>
+    <color name="transparent">#00000000</color>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="@dimen/dp_4"
+    android:layout_marginStart="@dimen/dp_4"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="@dimen/dp_4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/rlSpot"
+        android:padding="@dimen/dp_16">
+
+<!--
+        <com.joooonho.SelectableRoundedImageView
+            android:id="@+id/ivSpotPic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:sriv_oval="true" />-->
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/ivSpotPic"
+            app:riv_corner_radius="@dimen/dp_6"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tvSpotTitle"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_toEndOf="@id/ivSpotPic"
+            android:alpha=".8"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Siam Shopping Center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/tvSpotSubTitle"
+           android:fontFamily="@font/opensans_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPopularityType"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_toEndOf="@id/ivSpotPic"
+            android:alpha=".5"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Shopping center safsafsafasfasfasfasfasfasf"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tvPopularityType"
+           android:fontFamily="@font/opensans_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSpotTitle"
+            android:layout_marginStart="@dimen/dp_14"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textSize="11sp"
+            android:layout_toEndOf="@id/ivSpotPic"
+            tools:drawableStart="@drawable/flame_blue_listing_icon"
+            android:gravity="center_vertical"
+            android:text="popular" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

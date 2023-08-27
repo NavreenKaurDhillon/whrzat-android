@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:id="@+id/llMain"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_4"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvBack"
+            android:gravity="center_vertical"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            android:padding="@dimen/dp_12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/sp_20"
+            android:id="@+id/tvBlock"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opensans_semibold"
+            android:text="@string/label_blocked_contacts"/>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/tvNoData"
+        android:textSize="@dimen/sp_18"
+        android:fontFamily="@font/opensans_semibold"
+        android:textColor="@color/red_create"
+        android:text="@string/no_blocked_contacts"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvBlockedContacts"/>
+
+</LinearLayout>
+</layout>

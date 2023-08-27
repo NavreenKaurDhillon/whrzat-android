@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/llmain"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bottomBarGrey"
+        android:textSize="@dimen/sp_14"
+        android:id="@+id/tvSkip"
+        android:padding="@dimen/dp_16"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/avenirltstd_bold"
+        android:text="@string/label_skip"/>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"
+        android:layout_above="@+id/llIndicator"
+        android:layout_below="@+id/tvSkip"/>
+
+    <LinearLayout
+        android:id="@+id/llIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="54dp"
+        android:orientation="horizontal"/>
+
+
+
+</RelativeLayout>
+</layout>

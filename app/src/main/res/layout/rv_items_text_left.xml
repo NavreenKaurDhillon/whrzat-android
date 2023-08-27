@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTextLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:padding="@dimen/dp_12"
+        android:textColor="@color/black"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:background="@drawable/message_receive"
+        tools:text="."
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="@dimen/sp_16" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-16dp"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_below="@+id/tvTextLeft"
+        android:id="@+id/triangle"
+        android:src="@drawable/smallbox_grey"/>
+
+    <TextView
+        android:id="@+id/tvTimeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="fsafasf"
+        android:textSize="@dimen/sp_12"
+        android:layout_below="@+id/triangle"
+        android:textColor="@color/black"
+        android:alpha=".3"     />
+
+</RelativeLayout>

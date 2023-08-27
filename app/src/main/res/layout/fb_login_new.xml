@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:id="@+id/ivLogo"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/splash" />
+        <TextView
+            android:id="@+id/tvWhrzat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WhrzAt"
+            android:textSize="@dimen/sp_32"
+            android:visibility="visible"
+            android:fontFamily="@font/opensans_bold"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivLogo"/>
+
+
+        <TextView
+            android:text="@string/find_where_it_s_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDiscover"
+            android:textSize="@dimen/sp_24"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_below="@+id/tvWhrzat"
+            android:layout_marginTop="@dimen/dp_60" />
+
+        <TextView
+            android:id="@+id/tvExplore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDiscover"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/dp_36"
+            android:layout_marginBottom="@dimen/dp_100"
+            android:alpha=".5"
+            android:background="?selectableItemBackground"
+            android:fontFamily="@font/opensans_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/label_find_out_the_best_places_to_go_and_catch_n_up_with_your_friend"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/button_signup"
+            android:text="@string/label_sign_up"
+            android:id="@+id/tvSignUp"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginStart="@dimen/dp_24"
+            android:fontFamily="@font/opensans_bold"
+            android:foreground="?selectableItemBackground"
+            android:textColor="@android:color/white"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/sp_14" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_boundary"
+            android:text="@string/label_login"
+            android:layout_below="@+id/tvSignUp"
+            android:fontFamily="@font/opensans_bold"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvLogin"
+            android:foreground="?selectableItemBackground"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:alpha=".80"
+            android:textSize="@dimen/sp_14"
+            android:padding="16dp"
+            android:textColor="@color/colorAccent" />
+        <TextView
+            android:text="@string/by_signing_in_you_agree_with_our_terms_conditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTerms"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/tvLogin"
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="@color/black"
+            android:alpha=".43"
+            android:visibility="visible"
+            android:textSize="13sp"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginEnd="@dimen/dp_24" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivFacebook"
+        android:layout_marginStart="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/rlLogin"
+        android:visibility="gone"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/facebookbtn"/>
+
+</RelativeLayout>
+
+</layout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+            android:padding="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_6"
+            />
+
+        <TextView
+            android:id="@+id/tvSpotTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opensans_semibold"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tvBack"
+            android:layout_toLeftOf="@+id/Ivinfo"
+            android:layout_centerHorizontal="true"
+            android:paddingVertical="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/tvPopularityType"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/hotspot_detail_red_icon"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_below="@+id/tvSpotTitle"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            tools:text=""
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:textColor="@color/red" />
+        <ImageView
+            android:id="@+id/Ivinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_info"
+            android:padding="@dimen/dp_10"
+            android:layout_toStartOf="@+id/ivShare"
+            />
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/share"
+          android:visibility="visible"
+          android:padding="9dp"
+          android:scaleType="centerCrop"
+          android:layout_marginEnd="5dp"
+          android:layout_marginTop="2dp"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/shadow"/>
+    <TextView
+        android:id="@+id/tvTotalEvents"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:drawableEnd="@drawable/chevron_red_icon"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=" "
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@+id/tvTotalEvents"
+        android:layout_marginTop="@dimen/dp_16"
+        android:visibility="gone"
+        android:background="@color/shadow" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHotspotDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottomTab"
+            android:layout_marginBottom="@dimen/dim_4dp"
+            android:clipToPadding="false" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/shadow"
+            android:layout_below="@+id/rvHotspotDetail" />
+
+        <LinearLayout
+            android:id="@+id/llBottomTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="@dimen/dim_4dp"
+            android:layout_weight="4"
+            app:layout_collapseMode="pin">
+
+            <TextView
+                android:id="@+id/tvCheckIn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_flame_bottom"
+                android:drawablePadding="@dimen/dp_2"
+                android:gravity="center"
+                android:fontFamily="@font/opensans_regular"
+                android:text="@string/label_check_in"
+              android:layout_marginTop="4dp"
+                android:textColor="@android:color/transparent"
+                android:textSize="2sp" />
+
+
+            <TextView
+                android:id="@+id/tvAddPhoto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_add_image"
+                android:drawablePadding="@dimen/dp_2"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/opensans_regular"
+                android:text="@string/label_photos"
+              android:layout_marginTop="@dimen/dp_4"
+                android:textColor="@android:color/transparent"
+                android:textSize="2sp" />
+
+            <TextView
+                android:id="@+id/tvAddEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_add_event"
+                android:drawablePadding="@dimen/dp_2"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/opensans_regular"
+                android:text="@string/label_add_event"
+              android:layout_marginTop="@dimen/dim_4dp"
+                android:textColor="@android:color/transparent"
+                android:textSize="2sp" />
+
+
+            <TextView
+                android:id="@+id/tvFavEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_favorite"
+                android:drawablePadding="@dimen/dp_2"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center_horizontal"
+                android:text="@string/label_fav_event"
+              android:layout_marginTop="@dimen/dp_4"
+                android:textColor="@android:color/transparent"
+                android:textSize="2sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+</layout>

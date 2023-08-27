@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llCode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dp_16"
+    android:paddingEnd="@dimen/dp_24"
+    android:paddingStart="@dimen/dp_24"
+    android:paddingTop="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/tvCountryName"
+       android:fontFamily="@font/opensans_regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/black"
+        tools:text="India" />
+
+    <TextView
+        android:id="@+id/tvDialingCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:fontFamily="@font/opensans_regular"
+        android:textColor="@color/black"
+        tools:text="+91" />
+
+</LinearLayout>

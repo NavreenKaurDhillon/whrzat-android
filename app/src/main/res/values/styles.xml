@@ -1,0 +1,107 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/shadow</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="homeBottomBar">
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#D7D7D7</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+
+    <item name="windowActionBar">false</item>
+
+    <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="FullyTranslucent" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:progressBarStyle">@style/InvisibleProgress</item>
+    </style>
+
+
+    <style name="TransparentDilaog" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@style/MyAnimation.Window</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/bounce_in</item>
+        <item name="android:windowExitAnimation">@anim/abc_slide_out_top</item>
+    </style>
+
+
+    <style name="MyDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+
+    </style>
+  <!--  <item name="android:textColor">@color/black</item>
+    <item name="android:textColorPrimary">@color/white</item>
+    <item name="colorAccent">@color/black</item>-->
+
+
+    <style name="DIALOG_FULL_SCREEN" parent="android:Theme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="MyAnimation.DialogFragment" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/enter_from_right</item>
+        <item name="android:windowExitAnimation">@anim/exit_to_right</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="InvisibleProgress">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="ProgressDialogTheme">    
+                <item name="android:windowFrame">@null</item>   
+                <item name="android:windowBackground">@android:color/transparent</item>   
+                <item name="android:windowIsFloating">true</item>   
+                <item name="android:windowContentOverlay">@null</item>    
+                <item name="android:windowTitleStyle">@null</item>    
+                <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>  
+                <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>  
+                <item name="android:backgroundDimEnabled">true</item>   
+           
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="MyCustomTextAppearanceTabs" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+
+        <item name="android:textColor">@color/black</item>
+<!--        <item name="android:colorForeground">@color/colorAppLight</item>-->
+        <item name="android:textColorSecondary">@color/black</item>
+<!--        <item name="colorPrimaryDark">@color/colorAppLight</item>-->
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

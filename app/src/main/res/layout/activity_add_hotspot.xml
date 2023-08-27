@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true">
+
+  <androidx.core.widget.NestedScrollView
+    android:id="@+id/nestedSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:id="@+id/llAddhotsot"
+      android:orientation="vertical">
+
+      <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSpot"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_4"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <ImageView
+          android:id="@+id/tvCancel"
+          android:fontFamily="@font/opensans_semibold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:padding="12dp"
+          android:layout_marginStart="@dimen/dp_12"
+          app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+          />
+
+        <TextView
+          android:id="@+id/tvaddTitle"
+          android:fontFamily="@font/opensans_semibold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center_vertical"
+          android:text="@string/label_add_hotspot"
+          android:textColor="@color/black"
+          android:textSize="@dimen/sp_20" />
+
+
+      </androidx.appcompat.widget.Toolbar>
+
+      <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_12"
+            android:lineSpacingExtra="4dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/opensans_regular"
+            android:textSize="@dimen/sp_14"
+            android:drawableStart="@drawable/ic_event_location"
+            android:drawablePadding="@dimen/dp_6"
+            android:textColor="@color/black"
+            tools:text="Brazos Street \nBrazos Street, Creme Suite,\nNew York, NY, U.S.A 90412" />
+
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:alpha=".2"
+            android:background="@color/shadow_grey" />
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:alpha=".2"
+            android:visibility="invisible"
+            android:background="@color/viewLine" />
+
+
+          <ImageView
+            android:id="@+id/ivSpot"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:background="?selectableItemBackground"
+            android:scaleType="centerInside"
+            android:src="@drawable/add_hotspot" />
+
+          <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+            <EditText
+              android:id="@+id/etHotspotName"
+              android:fontFamily="@font/opensans_regular"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:hint="@string/label_hotspot_name"
+              android:imeOptions="actionNext"
+              android:inputType="textCapSentences"
+              android:maxLines="1"
+              android:padding="@dimen/dp_16"
+              android:textSize="@dimen/sp_16" />
+          </androidx.cardview.widget.CardView>
+
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:alpha=".2"
+            android:visibility="gone"
+            android:background="@color/shadow_grey" />
+          <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+            <EditText
+              android:id="@+id/etTags"
+              android:fontFamily="@font/opensans_regular"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:hint="@string/label_tags_bar_cricket_playground_coffee_shop"
+              android:imeOptions="actionNext"
+              android:inputType="text"
+              android:maxLines="1"
+              android:padding="@dimen/dp_16"
+              android:textSize="@dimen/sp_16" />
+          </androidx.cardview.widget.CardView>
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:alpha=".2"
+            android:visibility="gone"
+            android:background="@color/shadow_grey" />
+
+          <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+            <EditText
+              android:id="@+id/etDescription"
+              android:fontFamily="@font/opensans_regular"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/transparent"
+              android:hint="@string/label_description"
+              android:scrollHorizontally="false"
+              android:inputType="textMultiLine|textCapSentences"
+              android:imeOptions="actionDone"
+              android:padding="@dimen/dp_16"
+              android:textSize="@dimen/sp_16" />
+          </androidx.cardview.widget.CardView>
+
+
+          <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:alpha=".2"
+            android:visibility="gone"
+            android:background="@color/shadow_grey" />
+
+          <TextView
+            android:id="@+id/tvCreate"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baundary_login"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dp_12"
+            android:text="@string/label_create"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_32"
+            android:layout_marginBottom="@dimen/dp_80"/>
+        </LinearLayout>
+      </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+  </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
+</layout>

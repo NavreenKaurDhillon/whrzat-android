@@ -1,0 +1,139 @@
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/clParent"
+    android:layout_margin="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:background="@color/blue"
+        android:text="Edit"/>
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@color/red_create"
+        android:text="@string/label_delete"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/llLayout"
+        android:background="@android:color/white">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/timberlake"
+        android:scaleType="centerCrop"
+        android:id="@+id/ivPic"
+        android:transitionName="pic"
+        app:sriv_oval="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        tools:text="Adele Wells"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:layout_toEndOf="@+id/ivPic"
+        android:textSize="@dimen/sp_18"
+        android:transitionName="name"
+        fontPath="fonts/avenirltstd_medium.otf"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        tools:text="How To Quick And  naffsf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLastMessage"
+        android:maxLines="1"
+        android:layout_toEndOf="@+id/ivPic"
+        android:layout_below="@+id/tvName"
+        fontPath="fonts/avenirltstd_book.otf"
+        android:ellipsize="end"
+        android:layout_marginStart="16dp"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/greyWhrzat" />
+
+    <TextView
+        tools:text="10 min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTime"
+        android:layout_marginEnd="16dp"
+        android:textSize="@dimen/sp_16"
+        android:layout_toEndOf="@id/tvName"
+        fontPath="fonts/avenirltstd_book.otf"
+        android:textColor="@color/greyWhrzat" />
+
+    </LinearLayout>
+</FrameLayout>
+
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:background="@color/red"
+        android:text="Delete"/>
+
+    <TextView
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@color/blue"
+        android:text="Edit"/>
+
+    <LinearLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/display_text"
+            android:text="sample text"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

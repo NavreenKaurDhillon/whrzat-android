@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corners_shape"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_32">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivHotspot"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_placeholder_image"
+            app:riv_corner_radius="@dimen/dp_10"/>
+        <TextView
+            android:id="@+id/tvHotspotName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bar shop"
+            android:textColor="@color/black"
+            android:fontFamily="@font/opensans_bold"
+            android:textSize="@dimen/sp_24"
+            android:layout_toEndOf="@+id/ivHotspot"
+            android:layout_marginStart="@dimen/dp_10" />
+
+        <TextView
+            android:id="@+id/tvHotspotFlame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="just in"
+            android:fontFamily="@font/opensans_regular"
+            android:textSize="@dimen/sp_14"
+            android:layout_below="@+id/tvHotspotName"
+            android:gravity="center_vertical"
+            android:drawableStart="@drawable/hotspot_detail_yellow_icon"
+            android:drawablePadding="@dimen/dp_4"
+            android:layout_toEndOf="@+id/ivHotspot"
+            android:layout_marginStart="@dimen/dp_10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fav_count"
+            android:text="243"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_alignParentEnd="true"
+            android:drawableTop="@drawable/ic_favorite"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="@dimen/sp_18"
+        android:layout_toEndOf="@+id/ivHotspot"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"/>
+    <TextView
+        android:id="@+id/tvSpotDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A good place. The ambience is fine. Compared to other bars and lounges, the ambience has nothing unique and special. I won't recommend this place to couples as there are almost all men, from staff to customers."
+        android:fontFamily="@font/opensans_regular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        android:layout_toEndOf="@+id/ivHotspot"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="1dp"/>
+    <TextView
+        android:id="@+id/tvTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tags"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_bold"
+        android:textSize="@dimen/sp_18"
+        android:layout_toEndOf="@+id/ivHotspot"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"/>
+
+    <TextView
+        android:id="@+id/tvTags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/opensans_regular"
+        android:text="#food #bar #party #night #dance…"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/txtAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_toEndOf="@+id/ivHotspot"
+        android:fontFamily="@font/opensans_bold"
+        android:text="Address"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_18" />
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sector 29, Opp Lane Of Pizza Hut , Chandigarh."
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensans_regular"
+        android:textSize="@dimen/sp_14"
+        android:drawableStart="@drawable/ic_event_location"
+        android:drawablePadding="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="30dp"/>
+
+</LinearLayout>

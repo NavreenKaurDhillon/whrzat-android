@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/dp_12"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/DarkGrey"
+        android:textSize="@dimen/sp_18"
+        android:id="@+id/tvEventTitle"
+        android:fontFamily="@font/opensans_semibold"
+        tools:text="Burger Fest"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/DarkGrey"
+        android:layout_marginTop="@dimen/dp_12"
+        android:fontFamily="@font/opensans_regular"
+        android:id="@+id/tvEventDescription"
+        android:textSize="@dimen/sp_16"
+        tools:text="The coolest burgerfest is back again. \n Come be a part and get $10 off. "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_marginTop="@dimen/dp_12"
+        android:textSize="@dimen/sp_16"
+        android:id="@+id/tvTime"
+        tools:text="10:00 am - 11.30 am"/>
+</LinearLayout>

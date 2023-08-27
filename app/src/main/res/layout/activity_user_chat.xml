@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llMain"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:contentInsetLeft="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackground"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"/>
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivSpot"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="@dimen/dp_4"
+                android:transitionName="pic"
+                android:layout_toEndOf="@+id/tvBack"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_20"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="@dimen/dp_6"
+                android:gravity="center_vertical"
+                android:src="@drawable/profile_avatar_placeholder_large" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:fontFamily="@font/opensans_semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivSpot"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:textColor="@color/DarkGrey"
+                android:textSize="@dimen/sp_20"
+                tools:text="Ankit Singh" />
+
+            <ImageView
+                android:id="@+id/tvAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:padding="@dimen/dp_10"
+               app:srcCompat="@drawable/ic_baseline_more_horiz_24"
+                />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tvNoMessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/label_no_message" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_chat"
+        android:layout_above="@+id/view"
+        android:layout_below="@+id/toolbar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_above="@+id/rl_bottom_view"
+        android:alpha=".2"
+        android:background="@color/shadow_grey" />
+    <RelativeLayout
+        android:id="@+id/rl_bottom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/etText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/tvSend"
+            android:layout_marginRight="@dimen/dp_10"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/label_write_your_message"
+            android:fontFamily="@font/opensans_regular"
+            android:textSize="@dimen/sp_16"
+            android:maxLines="3"
+            android:padding="@dimen/dp_12" />
+        <ImageView
+            android:id="@+id/tvSend"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_send" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</layout>

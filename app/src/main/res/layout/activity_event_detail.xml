@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:id="@+id/rlMain1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_16"
+                android:onClick="onEventDetailClickData"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+              />
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/shadow" />
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:layout_marginBottom="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlMain"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvSpotTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_bold"
+                        android:maxLines="1"
+                        android:text="New event found"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_20" />
+
+
+                    <TextView
+                        android:id="@+id/tvSpotSubtitle"
+                        android:fontFamily="@font/avenirltstd_book"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvSpotTitle"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:alpha=".60"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/grey_detail"
+                        android:textSize="@dimen/sp_16"
+                        android:visibility="gone"
+                        tools:text="Shopping Center" />
+
+
+                    <TextView
+                        android:id="@+id/tvSpotDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvSpotSubtitle"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:autoLink="all"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:lineSpacingExtra="@dimen/dp_4"
+                        android:linksClickable="true"
+                        android:text="A rotating crew of comedians deliver
+stand-up, every tuesday."
+                        android:textSize="@dimen/sp_15" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tvSpotDescription"
+                        android:layout_marginTop="@dimen/dp_16">
+
+                        <TextView
+                            android:id="@+id/tvEvent_location"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_14"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:alpha=".80"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="67 W Culver St, Phoenix, AZ, United States"
+                            android:textColor="@color/bottom_bar_text_color"
+                            android:textSize="@dimen/sp_15"
+                            app:layout_constraintStart_toStartOf="parent"
+                            tools:ignore="MissingConstraints" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:id="@+id/rv"
+                            android:layout_marginStart="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvEvent_location"
+                            >
+
+                            <ImageView
+                                android:id="@+id/ivIcon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_clock" />
+
+                            <TextView
+                                android:id="@+id/tvEvent_time"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="12dp"
+                                android:alpha=".80"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/ivIcon"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:text="11:30 AM"
+                                android:textColor="@color/bottom_bar_text_color"
+                                android:textSize="@dimen/sp_15"
+                               />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/tvEvent_website"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="@dimen/dp_12"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:alpha=".80"
+                            android:onClick="onEventDetailClickData"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="5dp"
+                            android:text="http://whrzat.com"
+                            android:textColor="@color/next_blue"
+                            android:textSize="@dimen/sp_15"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/rv" />
+
+                        <View
+
+                            android:id="@+id/view"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:background="@color/next_blue"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/tvEvent_website"
+                            app:layout_constraintStart_toStartOf="@+id/tvEvent_website" />
+
+                       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_12"
+                android:visibility="gone"
+                android:background="@color/shadow" />
+            <!--<com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivSpot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/feed_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+-->
+            <ImageView
+                android:id="@+id/ivSpot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/feed_placeholder"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                android:contentDescription="@string/content_desc_iv_spot" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

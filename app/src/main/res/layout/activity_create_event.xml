@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llMain"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSpot"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:elevation="@dimen/dp_4">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_cancel"
+            android:background="?selectableItemBackground"
+            android:padding="@dimen/dp_16"
+            android:textColor="@color/DarkGrey"
+            android:textColorHint="@color/light_grey"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+           android:fontFamily="@font/opensans_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/add_event_star_icon"
+            android:drawablePadding="@dimen/dp_6"
+            android:gravity="center_vertical"
+            android:text="@string/label_add_Event"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+        <TextView
+            android:id="@+id/tvCreate"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="@dimen/dp_16"
+            android:gravity="center_vertical"
+            android:text="@string/label_create"
+            android:background="?selectableItemBackground"
+            android:textColor="@color/red_create"
+            android:textSize="17sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tvPopularityType"
+       android:fontFamily="@font/opensans_semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:drawablePadding="@dimen/dp_4"
+        android:drawableStart="@drawable/flame_red_listing_icon"
+        android:gravity="center_vertical"
+        android:textColor="@color/red_create"
+        android:textSize="@dimen/sp_16"
+        tools:text="Very Popular" />
+
+
+    <TextView
+        android:id="@+id/tvSpotName"
+       android:fontFamily="@font/opensans_semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        tools:text="Very Popular" />
+
+    <EditText
+        android:id="@+id/etEventName"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_24"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:background="@android:color/transparent"
+        android:hint="@string/label_event_name"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/shadow" />
+
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@android:color/transparent"
+        android:hint="@string/label_description"
+        android:imeOptions="actionNext"
+        android:maxLines="2"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/shadow" />
+
+    <TextView
+        android:id="@+id/tvStartDate"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:drawableEnd="@drawable/ic_date_range"
+        android:background="@android:color/transparent"
+        android:hint="@string/label_start"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/shadow" />
+
+    <TextView
+        android:id="@+id/tvEndDate"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:drawableEnd="@drawable/ic_date_range"
+        android:background="@android:color/transparent"
+        android:hint="@string/label_end"
+        android:textSize="@dimen/sp_16" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/shadow" />
+
+    <EditText
+        android:id="@+id/etTags"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@android:color/transparent"
+        android:hint="@string/label_tags_optional"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/shadow" />
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:id="@+id/tvDone"
+        android:textSize="@dimen/sp_16"
+        android:padding="@dimen/dp_16"
+        fontPath="fonts/AvenirLTStd_.Heavy.otf"
+        android:textColor="@color/red"
+        android:text="@string/label_done"/>-->
+
+</LinearLayout>
+
+</layout>

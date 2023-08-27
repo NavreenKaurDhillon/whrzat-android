@@ -1,0 +1,77 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/whrzat-android/app/src/main/res/layout/activity_event_detail.xml" value="0.1734375" />
+        <entry key="..\:/whrzat-android/app/src/main/res/layout/actvity_hotspot_detail.xml" value="0.14270833333333333" />
+        <entry key="..\:/whrzat-android/app/src/main/res/layout/fb_login_new.xml" value="0.13229166666666667" />
+        <entry key="..\:/whrzat-android/app/src/main/res/layout/fragment_profile_other.xml" value="0.13541666666666666" />
+        <entry key="..\:/whrzat-android/app/src/main/res/layout/rv_items_feed.xml" value="0.13541666666666666" />
+        <entry key="..\:/whrzat-android/app/src/main/res/layout/rv_items_feed_new.xml" value="0.13541666666666666" />
+        <entry key="..\:/whrzat-android/app/src/main/res/layout/rv_items_feed_permoted.xml" value="0.2388888888888889" />
+        <entry key="app/src/main/res/drawable/feed_placeholder.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/activity_add_hotspot.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_all_events.xml" value="0.1578125" />
+        <entry key="app/src/main/res/layout/activity_container.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_event_detail.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_explore.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_image_picker.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/activity_location.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1648148148148148" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.11041666666666666" />
+        <entry key="app/src/main/res/layout/activity_referal.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/activity_reward.xml" value="0.13518518518518519" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.27050359712230215" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_tutorials.xml" value="0.13518518518518519" />
+        <entry key="app/src/main/res/layout/activity_verify.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/actvity_hotspot_detail.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/custom_marker.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/detail_info_dialog.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/dialog_forgotpass.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fb_login_new.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_activity_profile.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_add_spot.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_block.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.15648148148148147" />
+        <entry key="app/src/main/res/layout/fragment_country_code.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/fragment_edit_profile.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_feed_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1287037037037037" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1259259259259259" />
+        <entry key="app/src/main/res/layout/fragment_permoted_feed.xml" value="0.15648148148148147" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile_favorite.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile_other.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.1574074074074074" />
+        <entry key="app/src/main/res/layout/item_viewpager_tutorial.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/layout_change_password.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/layout_progress_dialog.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/progress_bar_bottom.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/rv_favorite_adapter.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_item_country_code.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/rv_item_explore.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/rv_item_spot.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/rv_items_all_chats_new.xml" value="0.15648148148148147" />
+        <entry key="app/src/main/res/layout/rv_items_events.xml" value="0.1578125" />
+        <entry key="app/src/main/res/layout/rv_items_feed.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_items_feed_happening.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/rv_items_feed_new.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/rv_items_feed_permoted.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/rv_items_text_left.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_items_text_right.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_notification.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/rv_tem_blocked.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK" />
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.6848275756835938" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

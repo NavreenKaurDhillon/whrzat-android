@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/cv"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="12dp"
+        app:cardCornerRadius="@dimen/dp_12">
+
+        <TextView
+            android:id="@+id/tvClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/dp_8"
+            android:text="@string/label_clear"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cv"
+        android:paddingBottom="24dp"
+        android:clipToPadding="false"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom" />
+
+
+    <TextView
+        android:id="@+id/tvNoProfile"
+        android:fontFamily="@font/opensans_semibold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_80"
+        android:textColor="@color/red_create"
+        android:drawablePadding="@dimen/dp_8"
+        android:text="No activity"
+        android:textSize="@dimen/sp_18"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
+</layout>

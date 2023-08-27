@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_16"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTextRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_12"
+        android:layout_marginStart="@dimen/dp_60"
+        android:background="@drawable/message"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:layout_gravity="end"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/opensans_regular"
+        android:textColor="@color/black"
+        tools:text=".afafafafafafafafafafafsafafasfasfsafafasfasfafasfasfasfafasfasfa"
+        android:textSize="@dimen/sp_16" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginTop="-14dp"
+        android:id="@+id/ivTriangle"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tvTextRight"
+        android:visibility="gone"
+        android:src="@drawable/smallbox_coloured"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textColor="@color/black"
+        android:alpha=".3"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/ivTriangle"
+        android:textSize="@dimen/sp_12"
+        android:id="@+id/tvTimeRight"
+        tools:text="11:50"/>
+
+
+
+</RelativeLayout>

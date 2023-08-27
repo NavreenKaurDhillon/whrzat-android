@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlAllChat"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAllChat"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/dp_4"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+
+        <TextView
+            android:id="@+id/tvAllChatTitle"
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Chats"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_below="@+id/toolbarAllChat"
+        android:background="@drawable/edittext_curved"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="@dimen/dp_4"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:padding="@dimen/dp_12"
+        android:textSize="@dimen/sp_16"
+        android:hint="@string/label_search_chat" />
+
+    <TextView
+        android:id="@+id/tvNoChat"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/etSearch"
+        android:gravity="center"
+        android:text="@string/label_no_chat"
+        android:textColor="@color/red_create"
+        android:textSize="@dimen/sp_18" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etSearch"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChatAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:clipToPadding="false" />
+
+            <TextView
+                android:id="@+id/tvSwipeLeft"
+                android:fontFamily="@font/opensans_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvChatAll"
+                android:layout_marginTop="@dimen/dp_16"
+                android:gravity="center_horizontal"
+                android:text="@string/swipe_left_to_delete_the_chat"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
+</layout>

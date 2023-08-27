@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvFeed"
+        fontPath="fonts/AvenirLTStd_Medium.otf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginStart="@dimen/dp_24"
+        android:gravity="center"
+        android:text="@string/label_no_feed"
+        android:textColor="@color/red_create"
+        android:textSize="@dimen/sp_16"
+        android:visibility="gone" />
+
+
+<!--    <android.support.v4.widget.SwipeRefreshLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        -->
+<!--        android:id="@+id/swipeToRefresh">-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPermotedFeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingBottom="40dp"
+            android:clipToPadding="false"/>
+
+<!--    </android.support.v4.widget.SwipeRefreshLayout>-->
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:text="Promote Event"
+    android:textAllCaps="false"
+    android:paddingHorizontal="@dimen/dp_16"
+    android:textColor="@color/white"
+    android:background="@drawable/baundary_login"
+    android:textSize="17sp"
+    android:fontFamily="@font/avenirltstd_medium"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:id="@+id/btn_create_event"
+    />
+</RelativeLayout>
+</layout>

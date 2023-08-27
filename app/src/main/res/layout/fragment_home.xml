@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:id="@+id/home_view"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_weight=".850"
+            android:background="@drawable/edittext_curved"
+            android:drawableStart="@drawable/search_icon"
+            android:drawablePadding="@dimen/dp_4"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:padding="@dimen/dp_12"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:textSize="@dimen/sp_16"
+            tools:hint="@string/label_search" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_alignParentStart="true"
+            android:drawableTop="@drawable/ic_map"
+            android:fontFamily="@font/opensans_semibold"
+            android:text="@string/label_map"
+            android:gravity="center"
+            android:padding="@dimen/dp_8"
+            android:textColor="@android:color/black"
+            android:textSize="8sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/dp_8"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:scaleType="fitStart"
+                android:src="@drawable/splash"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WhrzAt"
+                android:id="@+id/tvlogo"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_24" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_alignParentEnd="true"
+            android:drawableTop="@drawable/ic_search"
+            android:fontFamily="@font/opensans_semibold"
+            android:text="Explore"
+            android:gravity="center"
+            android:paddingTop="@dimen/dp_8"
+            android:textColor="@android:color/black"
+            android:textSize="8sp" />
+
+
+    </RelativeLayout>
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapExplore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llSearch">
+    </com.google.android.gms.maps.MapView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true">
+
+        <ImageView
+            android:id="@+id/ivCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/circular_location"
+            android:padding="12dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_my_locatation" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSpotDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivCurrent"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/dp_12"
+            android:paddingEnd="@dimen/dp_12"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNoSpot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llSearch"
+        android:gravity="center"
+        android:layout_margin="30dp"
+        android:textColor="@color/red_create"
+        android:fontFamily="@font/opensans_semibold"
+        android:textSize="@dimen/sp_18"
+        android:visibility="gone" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSearch">
+
+        <RelativeLayout
+            android:id="@+id/layout_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_collapseMode="pin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/black"
+                app:tabMaxWidth="160dp"
+                app:tabMode="fixed"
+                app:tabPaddingBottom="1dp"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextAppearance="@style/MyCustomTextAppearanceTabs"
+                app:tabTextColor="@color/gray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabLayout"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomePromoted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabLayout"
+                android:layout_above="@+id/btn_create_event"
+                android:visibility="gone" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHappeningFeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tabLayout"
+                android:paddingBottom="24dp"
+                android:visibility="gone"
+                android:clipToPadding="false"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFeedContact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tabLayout"
+                android:visibility="gone"
+                android:paddingBottom="24dp"
+                android:clipToPadding="false"/>
+
+
+
+            <TextView
+                android:id="@+id/btn_create_event"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_12"
+                android:background="@drawable/baundary_login"
+                android:fontFamily="@font/opensans_bold"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/dp_16"
+                android:text="Promote an Event"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
+</layout>

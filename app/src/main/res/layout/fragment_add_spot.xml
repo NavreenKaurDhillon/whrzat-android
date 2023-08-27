@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/llhotsot"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/white"
+                android:elevation="@dimen/dp_4"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <TextView
+                    android:id="@+id/tvCancel"
+                    fontPath="fonts/AvenirLTStd_Medium.otf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:selectableItemBackground"
+                    android:padding="12dp"
+                    android:visibility="gone"
+                    android:text="@string/label_cancel"
+                    android:textColor="@color/DarkGrey"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/txtaddTitle"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="@string/label_add_hotspot"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16" />
+
+            </androidx.appcompat.widget.Toolbar>
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                android:id="@+id/tvAddAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_12"
+                android:lineSpacingExtra="4dp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/opensans_regular"
+                android:textSize="@dimen/sp_14"
+                android:drawableStart="@drawable/ic_event_location"
+                android:drawablePadding="@dimen/dp_6"
+                android:textColor="@color/black"
+                tools:text="Brazos Street \nBrazos Street, Creme Suite,\nNew York, NY, U.S.A 90412" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:alpha=".2"
+                    android:background="@color/shadow_grey" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:alpha=".2"
+                    android:visibility="invisible"
+                    android:background="@color/viewLine" />
+
+                <RelativeLayout
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imgSpot"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_200"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:src="@drawable/rectangle_background_grey"
+                        app:riv_corner_radius="@dimen/dp_10"
+                        android:scaleType="centerCrop" />
+                    <ImageView
+                        android:id="@+id/imgPlaceholder"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_60"
+                        app:srcCompat="@drawable/ic_image"/>
+                    <TextView
+                        android:id="@+id/tvAddText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Hotspot Image"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_below="@+id/imgPlaceholder"/>
+
+                </RelativeLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="4dp">
+                    <EditText
+                        android:id="@+id/etdHotspotName"
+                        android:fontFamily="@font/opensans_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/label_hotspot_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_16"
+                        android:textSize="@dimen/sp_12" />
+                </androidx.cardview.widget.CardView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:alpha=".2"
+                    android:visibility="gone"
+                    android:background="@color/shadow_grey" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="4dp">
+                    <EditText
+                        android:id="@+id/etdTags"
+                        android:fontFamily="@font/opensans_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/label_tags_bar_cricket_playground_coffee_shop"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_16"
+                        android:textSize="@dimen/sp_12" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:alpha=".2"
+                    android:visibility="gone"
+                    android:background="@color/shadow_grey" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="4dp">
+                    <EditText
+                        android:id="@+id/edtDescription"
+                        android:fontFamily="@font/opensans_bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/label_description"
+                        android:scrollHorizontally="false"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:imeOptions="actionDone"
+                        android:padding="@dimen/dp_16"
+                        android:textSize="@dimen/sp_12" />
+                </androidx.cardview.widget.CardView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_2"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:alpha=".2"
+                    android:visibility="gone"
+                    android:background="@color/shadow_grey" />
+
+                <TextView
+                    android:id="@+id/txtCreate"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/baundary_login"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dp_12"
+                    android:text="@string/label_create"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginBottom="@dimen/dp_80"/>
+            </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+</RelativeLayout>
+
+</layout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="@dimen/dp_4"
+        android:id="@+id/toolbar"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/white">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center"
+            fontPath="fonts/AvenirLTStd_Medium.otf" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_edit_profile"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:drawableEnd="@drawable/chevron_red_icon"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/tvEditProfile"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_Notificaitons"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:drawableEnd="@drawable/chevron_red_icon"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/tvEditProfile"
+        android:id="@+id/tvNotification"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_blocked"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:drawableEnd="@drawable/chevron_red_icon"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/tvNotification"
+        android:id="@+id/tvBlockedContacts"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_feed"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:drawableEnd="@drawable/chevron_red_icon"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/tvBlockedContacts"
+        android:id="@+id/tvFeed"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_radius"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/tvFeed"
+        android:id="@+id/tvRadius"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_contacts"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:textSize="@dimen/sp_16"
+        android:drawableEnd="@drawable/chevron_red_icon"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/tvRadius"
+        android:id="@+id/tvSyncContacts"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_help"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:textSize="@dimen/sp_16"
+        android:drawableEnd="@drawable/chevron_red_icon"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/tvSyncContacts"
+        android:id="@+id/tvHelpSupport"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_log_out"
+        android:textColor="@color/black"
+        android:alpha=".8"
+        android:padding="@dimen/dp_16"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_below="@+id/tvHelpSupport"
+        android:id="@+id/tvLogout"/>
+
+</RelativeLayout>
+</ScrollView>

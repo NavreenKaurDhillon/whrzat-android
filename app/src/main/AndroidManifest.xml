@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.location.gps"/>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+    <queries>
+        <!-- Browser -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="http" />
+        </intent>
+        <!-- Camera -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <!-- Gallery -->
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+    </queries>
+
+
+    <application
+        android:name=".util.MyApplication"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true"
+        android:largeHeap="true"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".activity.EditProfileActivity" />
+        <activity
+            android:name=".ui.SeachExplore.ExploreActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.map.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LocationGet.locationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.RewardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.referralCode.ReferalActivity"
+            android:screenOrientation="portrait" />
+
+<!--        <meta-data-->
+<!--            android:name="com.facebook.sdk.ApplicationId"-->
+<!--            android:value="@string/facebook_app_id" />-->
+
+<!--            <provider-->
+<!--            android:name="android.support.v4.content.FileProvider"-->
+<!--            android:authorities="${applicationId}.fileProvider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/provider_paths" />-->
+
+        <receiver
+            android:name="com.adjust.sdk.AdjustReferrerReceiver"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity android:name=".activity.SplashActivity"
+            android:exported="true"
+          android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+<!--          branchio-->
+<!--          <intent-filter android:autoVerify="true">-->
+<!--            <data android:scheme="WhrzAt" android:host="open" />-->
+<!--          <action android:name="android.intent.action.VIEW"/>-->
+<!--            <action android:name="android.intent.action.SEND"/>-->
+<!--          <category android:name="android.intent.category.DEFAULT"/>-->
+<!--          <category android:name="android.intent.category.BROWSABLE"/>-->
+
+
+<!--            firebase-->
+            <intent-filter>
+              <action android:name="android.intent.action.VIEW"/>
+              <action android:name="android.intent.action.SEND"/>
+              <category android:name="android.intent.category.DEFAULT"/>
+              <category android:name="android.intent.category.BROWSABLE"/>
+              <data
+                android:host="whrzat.page"
+                android:scheme="http"/>
+              <data
+                android:host="whrzat.page"
+                android:scheme="https"/>
+            </intent-filter>
+
+<!--          branch io-->
+<!--            <data-->
+<!--            android:host="whrzat.page"-->
+<!--            android:scheme="http"/>-->
+<!--            <data-->
+<!--            android:host="whrzat.page"-->
+<!--            android:scheme="https"/>-->
+
+<!--          </intent-filter>-->
+<!--          9q46s.app.link-->
+          <intent-filter android:autoVerify="true">
+            <action android:name="android.intent.action.VIEW" />
+            <action android:name="android.intent.action.SEND"/>
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+<!--            <data android:scheme="https" android:host="9q46s.app.link" />-->
+<!--            <data android:scheme="https" android:host="9q46s-alternate.app.link" />-->
+<!--            <data android:scheme="https" android:host="9q46s.test-app.link" />-->
+<!--            <data android:scheme="https" android:host="9q46s-alternate.test-app.link" />-->
+
+            <data android:scheme="http" android:host="whrzat.app.link"/>
+            <data android:scheme="https" android:host="whrzat.app.link"/>
+            <data android:scheme="http" android:host="whrzat-alternate.app.link"/>
+            <data android:scheme="https" android:host="whrzat-alternate.app.link"/>
+            <data android:scheme="https" android:host="whrzat.test-app.link" />
+            <data android:scheme="https" android:host="whrzat-alternate.test-app.link" />
+          </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ui.detailhotspot.DetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TutorialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.otherprofile.ProfileOtherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.chat.userchat.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.createvent.EventActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+      <meta-data android:name="og:title" android:value="WhrzAt"/>
+      <!-- Branch init -->
+      <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_oqee1C2N3o8mDXRmWYTIyhgprAdpacwi" />
+<!--      <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_oqee1C2N3o8mDXRmWYTIyhgprAdpacwi" />-->
+      <meta-data android:name="io.branch.sdk.TestMode" android:value="false" />     <!-- Set to true to use Branch_Test_Key (useful when simulating installs and/or switching between debug and production flavors) -->
+
+
+      <activity
+            android:name=".ui.fblogin.FbLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.addhotspot.AddSpotActivity"
+            android:screenOrientation="portrait"
+          android:windowSoftInputMode="adjustResize"/>
+<!--            android:windowSoftInputMode="stateHidden|adjustResize"-->
+          />
+<!--        <activity-->
+<!--            android:name="com.facebook.FacebookActivity"-->
+<!--            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"-->
+<!--            android:label="@string/app_name" />-->
+        <!--
+      android:theme="@style/FullyTranslucent"
+        tools:replace="android:theme"
+        -->
+<!--        <activity-->
+<!--            android:name="com.facebook.CustomTabActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+
+<!--                <data android:scheme="@string/fb_login_protocol_scheme" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity android:name=".ui.allevents.AllEventsActivity" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".ui.feed.event_detail.EventDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.hotspotlocation.HotspotLocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.ImagePickerActivity"/>
+
+        <activity android:name=".ui.otp.ActivityOtpverify"
+            android:screenOrientation="portrait"/>
+        <!-- <service android:name=".notifications.MyFirebaseInstanceIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <service android:name=".notifications.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
+<!--        <meta-data-->
+<!--            android:name="io.fabric.ApiKey"-->
+<!--            android:value="f0c02c0ca0823958451ad35d488a5b511bea011d" />-->
+    </application>
+  <queries>
+    <intent>
+      <action android:name="android.intent.action.SEND" />
+      <data android:mimeType="text/plain" />
+    </intent>
+  </queries>
+</manifest>
